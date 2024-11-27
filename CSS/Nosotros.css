@@ -68,18 +68,14 @@ nav {
     align-items: center;     /* Centrar los elementos */
 }
 
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
 
 .hero-content p {
     margin-bottom: 20px;
 }
 
-.hero img {
-    width: 60%;
-    height: 60%;
+.hero div img {
+    width: 70%;
+    height: 70%;
     transition: 0.3s;
     object-fit: cover;
     border-radius: 10px;
@@ -102,13 +98,13 @@ nav {
     justify-content: center; /* Centrar las imágenes */
     flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .hero .c15 img {
     width: 250px;
     height: 150px;
-    margin: 10px;
+    margin: 35px;
 }
 
 .hero .c18 {
@@ -116,13 +112,13 @@ nav {
     justify-content: center; /* Centrar las imágenes */
     flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .hero .c18 img {
     width: 250px;
     height: 150px;
-    margin: 10px;
+    margin: 35px;
 }
 
 .hero .c {
@@ -130,13 +126,13 @@ nav {
     justify-content: center; /* Centrar las imágenes */
     flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .hero .c img {
     width: 250px;
     height: 150px;
-    margin: 10px;
+    margin: 35px;
 }
 
 .hero a{
@@ -144,4 +140,65 @@ nav {
     color: white;
     margin-left: 10px;
     margin-right: 20px;
+}
+
+
+article{
+    position: relative;
+    width: 450px;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 60px
+    -60px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover{
+    transform: 
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: 
+    linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0)95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before{
+    opacity: 1;
+}
+
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
 }
