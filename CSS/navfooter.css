@@ -282,12 +282,11 @@ button {
     }
 
     .copyright-content {
-        gap: 5px;
+        gap: 0px;
         text-align: center;
-        font-size: 0.8em;
-    }
-    .copyright-text {
-        padding-left: 9%;
+        font-size: 0.85em;
+        padding: 0 5px;
+        flex-direction: column;
     }
     .nav-links a {
         color: white;
@@ -310,12 +309,19 @@ button {
         justify-content: center;
     }
     footer::before {
-        bottom: 190px;
+        bottom:226px;
         height: 159px;
     }
     footer::after {
         top: 0;
         height: 159px;
 
+    }
+    .copyright-social a {
+        font-size: 1.6rem;
+    }
+    .copyright-text {
+        color: white;
+        padding-left: 0%;
     }
 }
