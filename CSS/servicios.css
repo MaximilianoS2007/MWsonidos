@@ -1,18 +1,18 @@
+/*Container Servicios*/
 .servicios{
-    /*background-image: url();
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../Componentes/Imagenes/fiesta.jpg');
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
-    */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    width: auto;
+    height: 100vh;
     color: #000;
-    background-color: red;
 }
-
+/*Container texto*/
 .servicios__texto{
     width: 100%;
     display: flex;
@@ -24,10 +24,11 @@
 
 .servicios__texto p{
     text-align: center;
-    color: black;
+    color: #ffff;
     max-width: 600px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
+/*Contenedor de cartas y servicios*/
 .servicios__contenedor-card{
     width: 100%;
     height: auto;
@@ -38,6 +39,7 @@
     flex-wrap: wrap;
 }
 
+/*Cartas*/
 .card{
     display: flex;
     align-items: center;
@@ -45,25 +47,37 @@
     flex-direction: column;
     height: auto;
     max-width: 500px;
-    background-color: red;
-    /*background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0));
+    /*Efecto glass*/
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter:blur(10px) ;
     border: 1px solid rgba(255,255,255,0.18);
     box-shadow: 0 8px 32px 0 rgba(255,255,255,0.37);
-    */
-    color: black;
+    /*Fin de efecto glass*/
+    color: #ffff;
     padding: 20px;
     margin: 20px;
     border-radius: 12px;
+    transition: transform  0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .card h3{
-    padding: 8px;
+    padding: 0 8px;
     font-size: 2rem;
 }
+
+.card ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center; 
+}
+
 .card ul li{
     list-style: none;
-    text-align: start;
+    text-align: center;
     font-size: 1.5rem;
 }
 .card p{
@@ -79,16 +93,21 @@
 }
 .servicios__boton a {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid black; /*rgba(255, 255, 255, 0.2);*/
+    border: 1px solid  rgba(255, 255, 255, 0.2);
     margin-top: 30px;
-    color: black;
     padding: 10px 20px;
     border-radius: 25px;
+    color: #ffff;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .servicios__boton a:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
