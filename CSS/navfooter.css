@@ -24,7 +24,7 @@ nav {
 }
 
 footer {
-    background-color: #000;
+    background-color: #000000;
     color: white;
     padding: 40px 0 0 0;
     font-family: Arial, sans-serif;
@@ -117,7 +117,26 @@ footer {
 .footer-social .fab.fa-instagram:hover {
     color: #e4405f;
 }
-
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 83px;
+    left: 5%;
+    right: 5%;
+    height: 159px;
+    background: radial-gradient(ellipse 60% 50% at center bottom, rgba(255, 255, 255, 0.4), transparent 85%);
+    pointer-events: none;
+}
+footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 159px;
+    background: radial-gradient(ellipse 60% 50% at center top, rgba(255, 255, 255, 0.4), transparent 85%);
+    pointer-events: none;
+}
 i {
     padding: 10px;
 }
@@ -126,8 +145,8 @@ i {
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
+    position: relative;
 }
-
 .copyright-content {
     max-width: 1200px;
     margin: 0 auto;
