@@ -282,12 +282,12 @@ button {
     }
 
     .copyright-content {
-        flex-direction: column;
-        gap: 15px;
+        gap: 5px;
         text-align: center;
+        font-size: 0.8em;
     }
     .copyright-text {
-        padding-left: 0%;
+        padding-left: 9%;
     }
     .nav-links a {
         color: white;
@@ -305,5 +305,17 @@ button {
     .hero {
         flex-direction: column;
         text-align: center;
+    }
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+    footer::before {
+        bottom: 190px;
+        height: 159px;
+    }
+    footer::after {
+        top: 0;
+        height: 159px;
+
     }
 }
