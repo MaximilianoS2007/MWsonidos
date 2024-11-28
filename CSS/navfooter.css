@@ -90,19 +90,36 @@ footer {
     display: inline-block;
 }
 
-.social-icons {
+.footer-social .social-icons {
     display: flex;
+    justify-content: start;
     gap: 15px;
 }
 
-.social-icon img {
-    width: 30px;
-    height: 30px;
-    transition: opacity 0.3s;
+.footer-social .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
 }
 
-.social-icon:hover img {
-    opacity: 0.8;
+.footer-social .social-icons a:hover {
+    color: #f0f0f0; /* Cambia el color al pasar el cursor */
+}
+
+.footer-social .fab.fa-whatsapp:hover {
+    color: #25D366;
+}
+
+.footer-social .fab.fa-facebook:hover {
+    color: #3b5998;
+}
+
+.footer-social .fab.fa-instagram:hover {
+    color: #e4405f;
+}
+
+i {
+    padding: 10px;
 }
 
 .copyright-bar {
@@ -127,16 +144,32 @@ footer {
 
 .copyright-text {
     color: white;
+    padding-left: 10%;
 }
 
 .copyright-social {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
-.copyright-social img {
-    width: 24px;
-    height: 24px;
+
+.copyright-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.copyright-social a:hover {
+    color: #f0f0f0; /* Cambia el color al pasar el cursor */
+}
+
+.copyright-social .fab.fa-whatsapp:hover {
+    color: #25D366;
+}
+
+.copyright-social .fab.fa-instagram:hover {
+    color: #e4405f;
 }
 
 @media (max-width: 768px) {
@@ -163,5 +196,8 @@ footer {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+    .copyright-text {
+        padding-left: 0%;
     }
 }
