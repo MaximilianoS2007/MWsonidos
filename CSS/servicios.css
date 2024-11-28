@@ -10,6 +10,7 @@
     flex-direction: column;
     min-height: 100vh;
     color: #000;
+    background-color: red;
 }
 
 .servicios__texto{
@@ -22,9 +23,10 @@
 }
 
 .servicios__texto p{
-    padding: 0.5rem;
     text-align: center;
     color: black;
+    max-width: 600px;
+    font-size: 1.2rem;
 }
 .servicios__contenedor-card{
     width: 100%;
@@ -37,13 +39,19 @@
 }
 
 .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: auto;
     max-width: 500px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0));
+    background-color: red;
+    /*background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter:blur(10px) ;
     border: 1px solid rgba(255,255,255,0.18);
     box-shadow: 0 8px 32px 0 rgba(255,255,255,0.37);
+    */
     color: black;
     padding: 20px;
     margin: 20px;
@@ -55,14 +63,13 @@
 }
 .card ul li{
     list-style: none;
-    text-align: center;
-    margin: 10px;
+    text-align: start;
     font-size: 1.5rem;
 }
 .card p{
     text-align: center;
     font-size: 1rem;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .servicios__boton{
@@ -73,6 +80,7 @@
 .servicios__boton a {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid black; /*rgba(255, 255, 255, 0.2);*/
+    margin-top: 30px;
     color: black;
     padding: 10px 20px;
     border-radius: 25px;
