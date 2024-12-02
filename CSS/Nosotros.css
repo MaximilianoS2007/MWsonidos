@@ -57,7 +57,9 @@ nav {
 }
 
 .hero {
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../Componentes/Imagenes/fiesta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     backdrop-filter: blur(5px);
     border-radius: 20px;
     padding: 40px;
@@ -79,7 +81,7 @@ nav {
     transition: 0.3s;
     object-fit: cover;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 .hero img:hover {
@@ -102,8 +104,8 @@ nav {
 }
 
 .hero .c15 img {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     margin: 35px;
 }
 
@@ -116,8 +118,8 @@ nav {
 }
 
 .hero .c18 img {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     margin: 35px;
 }
 
@@ -130,8 +132,8 @@ nav {
 }
 
 .hero .c img {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     margin: 35px;
 }
 

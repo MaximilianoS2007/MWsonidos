@@ -5,10 +5,11 @@ body, html {
     height: 100%;
 }
 
-<<<<<<< HEAD
+
 main {
     justify-content: center;
-=======
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -35,7 +36,6 @@ main {
 
 .hero {
     display: flex;
->>>>>>> c8453754b2bb9ce22fd5de22cb1c237274652af0
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
@@ -47,8 +47,6 @@ main {
     z-index: 1;
 }
 
-<<<<<<< HEAD
-=======
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -58,7 +56,6 @@ main {
     margin-bottom: 20px;
 }
 
->>>>>>> c8453754b2bb9ce22fd5de22cb1c237274652af0
 .alien-dj {
     width: 150px;
     height: 150px;
