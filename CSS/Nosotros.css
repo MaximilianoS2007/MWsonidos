@@ -204,3 +204,14 @@ article:hover img:last-child{
     opacity: 1;
     transform: translateY(10%);
 }
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alien-dj {
+        margin: 0 auto 20px auto;
+    }
+}
