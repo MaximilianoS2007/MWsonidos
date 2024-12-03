@@ -107,3 +107,11 @@
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
+footer::before {
+    bottom: 68px;
+}
+@media (max-width: 768px) {
+    footer::before {
+        bottom: 193px;
+    }
+}
