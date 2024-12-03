@@ -71,6 +71,7 @@ nav {
     max-width: 100%;
     position: relative;
     z-index: 1;
+    height: auto;
 }
 .hero-content h1 {
     font-size: 3em;
