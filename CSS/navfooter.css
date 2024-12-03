@@ -17,28 +17,31 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-  }
-  
-  #background-video {
+    height: 100%;  /* Asegura que cubra toda la pantalla */
+    z-index: -1;   /* Coloca el video por detrás del contenido */
+    overflow: hidden; /* Evita que el video sobresalga de su contenedor */
+}
+
+#background-video {
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     transform: translateX(-50%) translateY(-50%);
-    object-fit: cover;
-  }
+    object-fit: cover; /* Asegura que el video cubra todo el área sin distorsionarse */
+}
+
 .container {
     position: relative;
     width: 100%;
-    height: auto+10%;
+    min-height: 100vh;  /* Asegura que el contenedor ocupe al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
     color: white;
 }
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -64,12 +67,11 @@ nav {
     align-items: center;
     backdrop-filter: blur(5px);
     padding: 40px;
-    margin: 20px;
+    margin: 20px 20px;  /* Esto asegura que haya un espacio entre el navbar y el hero */
     max-width: 100%;
     position: relative;
     z-index: 1;
 }
-
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -91,7 +93,9 @@ footer {
     font-family: Arial, sans-serif;
     z-index: 10;
     position: relative;
+    margin-top: auto; /* Esto asegura que el footer se mantenga en la parte inferior */
 }
+
 
 .footer-content {
     max-width: 1200px;
@@ -181,7 +185,7 @@ footer {
 footer::before {
     content: '';
     position: absolute;
-    bottom: 83px;
+    bottom: 84px;
     left: 5%;
     right: 5%;
     height: 159px;
