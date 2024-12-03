@@ -1,0 +1,217 @@
+/*Maxi */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav-links a:hover{
+    background-color: #4e4c4c;
+    border-radius: 3px;
+    height: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.logo {
+    width: 300px;
+    height: 50px;
+    background-color: #777;
+    border-radius: 20px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../Componentes/Imagenes/fiesta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;  /* Cambiar el layout a columna */
+    align-items: center;     /* Centrar los elementos */
+}
+
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.hero div img {
+    width: 70%;
+    height: 70%;
+    transition: 0.3s;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.hero img:hover {
+    transform: scale(1.1);
+}
+
+.hero h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero .c15 {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.hero .c15 img {
+    width: 350px;
+    height: 250px;
+    margin: 35px;
+}
+
+.hero .c18 {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.hero .c18 img {
+    width: 350px;
+    height: 250px;
+    margin: 35px;
+}
+
+.hero .c {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    flex-wrap: wrap; /* Asegurar que las imágenes no se desborden */
+    width: 100%;
+    margin-top: 35px;
+}
+
+.hero .c img {
+    width: 350px;
+    height: 250px;
+    margin: 35px;
+}
+
+.hero a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+article{
+    position: relative;
+    width: 450px;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 60px
+    -60px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover{
+    transform: 
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: 
+    linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0)95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before{
+    opacity: 1;
+}
+
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alien-dj {
+        margin: 0 auto 20px auto;
+    }
+}

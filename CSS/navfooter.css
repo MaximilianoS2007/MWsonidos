@@ -77,7 +77,28 @@ nav {
     margin-bottom: 20px;
 }
 
-.hero-content p {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-logo .logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.footer-section h3 {
+    color: white;
     margin-bottom: 20px;
 }
 .alien-dj {
