@@ -88,12 +88,6 @@ nav {
     transform: scale(1.1);     /* Efecto de zoom */
 }
 
-article{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .hero h2, .hero h1 {
     display: flex;
     justify-content: center;
@@ -152,6 +146,11 @@ article{
     margin-right: 20px;
 }
 
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 article {
     position: relative;
@@ -230,10 +229,10 @@ footer::before {
         margin: 0 auto 20px auto;
     }
     footer{
-        margin-top: 485%;
+        margin-top: 700%;
     }
     footer::before {
-        bottom: 193px;
+        bottom: auto;
     }
     
     .hero h1{
@@ -248,24 +247,15 @@ footer::before {
         width: 300px;
     }
 
-
-    .hero .c15, .hero .c18, .hero .c {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        width: 100%;
-        overflow-x: auto; /* Agrega scroll horizontal */
-        margin-top: 30px;
-    }
-
-    .hero .c15 .image-container, .hero .c18 .image-container, .hero .c .image-container {
-        display: flex;
-        flex-direction: column; /* El título se posiciona encima de la imagen */
-        justify-content: center;
-        align-items: center;
-        width: 250px; /* Tamaño de cada contenedor */
-        margin: 10px;
-    }
+.hero .c15 img, .hero .c18 img, .hero .c img {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto; /* Agrega scroll horizontal */
+    margin-top: 30px;
+}
 
 
     .hero .c15 img, .hero .c18 img, .hero .c img {
