@@ -1,15 +1,12 @@
 /*Container Servicios*/
 .servicios{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../Componentes/Imagenes/fiesta.jpg');
-    background-size: cover;        
     background-position: center;   
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: auto;
-    height: 100vh;
+    height: auto;
     color: #000;
 }
 /*Container texto*/
@@ -35,7 +32,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -110,4 +106,12 @@
 .servicios__boton a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
+}
+footer::before {
+    bottom: 68px;
+}
+@media (max-width: 768px) {
+    footer::before {
+        bottom: 193px;
+    }
 }

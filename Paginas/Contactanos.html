@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MW SONIDOS</title>
     <link rel="stylesheet" href="../CSS/navfooter.css"><!-- CSS obligatorio -->
+    <link rel="stylesheet" href="../CSS/Calendario.css"><!-- CSS obligatorio -->
 
 </head>
 <body>
-    <div class="container">
-        <video id="background-video" autoplay loop muted>
-            <!-- video -->
+    <div class="video-background">
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="../Imagenes/WhatsApp Video 2024-11-28 at 18.17.09.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
         </video>
-
-        <nav>
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="Imagenes/Logo">
-                </a>
-            </div>
+    </div>
+    <div class="container">
+        <nav class="glass">
+            <div class="logo glass"></div>
             <div class="nav-links">
                 <a href="Nosotros.html">Nosotros</a>
                 <a href="Servicios.html">Servicios</a>
@@ -27,13 +26,59 @@
                 <a href="Calendario.html">Calendario</a>
             </div>
         </nav>
-
         <main>
-            <div class="hero">
-                
+            <div class="hero glass">
+                <div class="hero-content">
+                    <!-- Agregar Contenido Aqui-->
+                </div>
             </div>
         </main>
-    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="MW SONIDOS" class="logo">
+            </div>
+            <div class="footer-nav">
+                <div class="footer-section">
+                    <h3>Pagina</h3>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Servicios.html">Servicios</a></li>
+                        <li><a href="Calendario.html">Calendario</a></li>
+                        <li><a href="Contactanos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Teléfono: 299 999 999</li>
+                        <li>Correo: ejemplo@gmail.com</li>
+                        <li>Ubicación: Mi casita</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Seguinos</h3>
+                <div class="social-icons">
+                    <a class="social-buttons__item whatsapp" href="https://" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="social-buttons__item facebook" href="https://" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a class="social-buttons__item instagram" href="https://" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <div class="copyright-content">
+                <span class="ccs">CCS</span>
+                <span class="copyright-text">© 2024 Creative Code Studio. Todos los derechos reservados.</span>
+                <div class="copyright-social">
+                    <a class="social-buttons__item whatsapp" href="https://" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="social-buttons__item instagram" href="https://" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-

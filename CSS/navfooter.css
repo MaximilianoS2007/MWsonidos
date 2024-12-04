@@ -4,33 +4,120 @@ body, html {
     font-family: Arial, sans-serif;
     height: 100%;
 }
+.glass{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Asegura que cubra toda la pantalla */
+    z-index: -1;   /* Coloca el video por detrás del contenido */
+    overflow: hidden; /* Evita que el video sobresalga de su contenedor */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover; /* Asegura que el video cubra todo el área sin distorsionarse */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;  /* Asegura que el contenedor ocupe al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 20px;
     margin: 20px;
 }
-
+.logo {
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+}
 .nav-links a {
     color: white;
     text-decoration: none;
     margin-left: 10px;
     margin-right: 20px;
 }
+.hero {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    margin: 20px 20px;  /* Esto asegura que haya un espacio entre el navbar y el hero */
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-logo .logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+.alien-dj {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    margin-right: 40px;
+}
 footer {
-    background-color: #000;
+    background-color: #000000;
     color: white;
     padding: 40px 0 0 0;
     font-family: Arial, sans-serif;
     z-index: 10;
     position: relative;
+    margin-top: auto; /* Esto asegura que el footer se mantenga en la parte inferior */
 }
+
 
 .footer-content {
     max-width: 1200px;
@@ -117,7 +204,26 @@ footer {
 .footer-social .fab.fa-instagram:hover {
     color: #e4405f;
 }
-
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 84px;
+    left: 5%;
+    right: 5%;
+    height: 159px;
+    background: radial-gradient(ellipse 60% 50% at center bottom, rgba(255, 255, 255, 0.4), transparent 85%);
+    pointer-events: none;
+}
+footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 159px;
+    background: radial-gradient(ellipse 60% 50% at center top, rgba(255, 255, 255, 0.4), transparent 85%);
+    pointer-events: none;
+}
 i {
     padding: 10px;
 }
@@ -126,8 +232,8 @@ i {
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
+    position: relative;
 }
-
 .copyright-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -171,6 +277,15 @@ i {
 .copyright-social .fab.fa-instagram:hover {
     color: #e4405f;
 }
+button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
 @media (max-width: 768px) {
     .footer-content {
@@ -193,11 +308,46 @@ i {
     }
 
     .copyright-content {
+        gap: 0px;
+        text-align: center;
+        font-size: 0.85em;
+        padding: 0 5px;
         flex-direction: column;
-        gap: 15px;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    .alien-dj {
+        margin: 0 auto 20px auto;
+    }
+    .hero {
+        flex-direction: column;
         text-align: center;
     }
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+    footer::before {
+        bottom:226px;
+        height: 159px;
+    }
+    footer::after {
+        top: 0;
+        height: 159px;
+
+    }
+    .copyright-social a {
+        font-size: 1.6rem;
+    }
     .copyright-text {
+        color: white;
         padding-left: 0%;
     }
 }

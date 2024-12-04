@@ -1,0 +1,8 @@
+footer::before {
+    bottom: 68px;
+}
+@media (max-width: 768px) {
+    footer::before {
+        bottom: 193px;
+    }
+}
