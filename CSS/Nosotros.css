@@ -63,14 +63,13 @@ nav {
 .hero {
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    padding: 40px;
+    padding: 80px;
     margin: 20px;
     max-width: 100%;
     display: flex;
-    flex-direction: column;  /* Cambiar el layout a columna */
-    align-items: center;     /* Centrar los elementos */
+    flex-direction: column;
+    align-items: center;     /* Centra el contenido horizontalmente */
 }
-
 
 .hero-content p {
     margin-bottom: 20px;
@@ -78,7 +77,7 @@ nav {
 
 .hero div img {
     width: 70%;
-    height: 70%;
+    height: auto;             /* Mantener proporciones correctas */
     transition: 0.3s;
     object-fit: cover;
     border-radius: 10px;
@@ -86,15 +85,23 @@ nav {
 }
 
 .hero img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);     /* Efecto de zoom */
 }
 
-.hero h2 {
+article{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
+
+.hero h2, .hero h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;        /* Asegurar que el texto esté centrado */
+    width: 100%;               /* Ocupa el ancho completo */
+}
+
 
 .hero .c15 {
     display: flex;
@@ -146,21 +153,25 @@ nav {
 }
 
 
-article{
+article {
     position: relative;
     width: 450px;
     transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Centra el contenido horizontalmente */
+    margin-top: 0;              /* Elimina el margen superior */
 }
 
 article img:first-child {
-    box-shadow: 0 60px 60px
-    -60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 60px 60px -60px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     object-fit: cover;
     width: 100%;
+    margin-top: 0;  /* Elimina cualquier margen superior, para que quede pegada al top del contenedor */
 }
 
-article img:last-child{
+article img:last-child {
     position: absolute;
     width: 200px;
     bottom: 0;
@@ -172,7 +183,7 @@ article img:last-child{
     opacity: 0;
 }
 
-article:hover{
+article:hover {
     transform: 
     perspective(250px)
     rotateX(10deg)
@@ -180,7 +191,7 @@ article:hover{
     translateZ(0);
 }
 
-article::before{
+article::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -190,18 +201,18 @@ article::before{
     linear-gradient(
         to bottom,
         transparent 10%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0)95%
+        rgba(255, 255, 255, 0.5) 50%,
+        rgb(255, 255, 255) 95%
     );
     opacity: 0;
     transition: all .3s ease;
 }
 
-article:hover::before{
+article:hover::before {
     opacity: 1;
 }
 
-article:hover img:last-child{
+article:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
 }
@@ -223,5 +234,47 @@ footer::before {
     }
     footer::before {
         bottom: 193px;
+    }
+    
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .hero h2{
+        font-size: 15px;
+    }
+
+    article{
+        width: 300px;
+    }
+
+
+    .hero .c15, .hero .c18, .hero .c {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto; /* Agrega scroll horizontal */
+        margin-top: 30px;
+    }
+
+    .hero .c15 .image-container, .hero .c18 .image-container, .hero .c .image-container {
+        display: flex;
+        flex-direction: column; /* El título se posiciona encima de la imagen */
+        justify-content: center;
+        align-items: center;
+        width: 250px; /* Tamaño de cada contenedor */
+        margin: 10px;
+    }
+
+
+    .hero .c15 img, .hero .c18 img, .hero .c img {
+        width: 250px;
+        height: 175px;
+        object-fit: cover; /* Para mantener la imagen dentro del contenedor */
+    }
+
+    .hero .c15, .hero .c18, .hero .c {
+        -webkit-overflow-scrolling: touch;
     }
 }
