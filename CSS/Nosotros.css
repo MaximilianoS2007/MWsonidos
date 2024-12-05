@@ -9,9 +9,6 @@ body, html {
     overflow: auto;
 }
 
-footer{
-    margin-top: 230%;
-}
 nav {
     display: flex;
     justify-content: space-between;
@@ -95,7 +92,6 @@ nav {
     text-align: center;        /* Asegurar que el texto esté centrado */
     width: 100%;               /* Ocupa el ancho completo */
 }
-
 
 .hero .c15 {
     display: flex;
@@ -219,6 +215,11 @@ article:hover img:last-child {
 footer::before {
     bottom: 68px;
 }
+
+footer{
+    margin-top: 200%;
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -247,24 +248,27 @@ footer::before {
         width: 300px;
     }
 
-.hero .c15 img, .hero .c18 img, .hero .c img {
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: auto; /* Agrega scroll horizontal */
-    margin-top: 30px;
-}
-
-
-    .hero .c15 img, .hero .c18 img, .hero .c img {
-        width: 250px;
-        height: 175px;
-        object-fit: cover; /* Para mantener la imagen dentro del contenedor */
+    .hero .c15, .hero .c18, .hero .c {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap; /* No permitir que las imágenes se acomoden en varias filas */
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejorar la experiencia de desplazamiento táctil */
+        width: 100%;
+        margin-top: 10px;
+        scrollbar-width: none; /* Firefox */
+        scroll-snap-type: x mandatory; /* Habilitar scroll snapping */
     }
 
-    .hero .c15, .hero .c18, .hero .c {
-        -webkit-overflow-scrolling: touch;
+    .hero .c15 img, .hero .c18 img, .hero .c img {
+        width: 100%; /* Las imágenes ocuparán todo el ancho de su contenedor */
+        height: auto;
+        object-fit: cover; /* Mantener la proporción de las imágenes */
+        margin-right: 15px; /* Espacio entre las imágenes */
+        scroll-snap-align: start; /* Asegurarse de que cada imagen se alinee al inicio del contenedor */
+    }
+    
+    .hero div img {
+        filter: none; /* Elimina el filtro en pantallas pequeñas */
     }
 }

@@ -1,4 +1,5 @@
 @import url(../Componentes/Fuentes/CocomatPro-Bold.ttf);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Danfo&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*Maxi */
 body, html {
@@ -70,7 +71,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;  /* Necesario para posicionar el 'ul' de forma absoluta */
+    padding-top: 150px;  /* Espacio adicional arriba para que no se sobreponga */
 }
+
 
 .hero-content p {
     margin-bottom: 20px;
@@ -107,6 +111,102 @@ img{
 
 .galeria img:hover {
     transform: scale(1.1);
+}
+
+
+
+ul {
+    position: absolute;  /* Posiciona el 'ul' fuera del flujo normal */
+    top: 0;              /* Lo coloca en la parte superior del contenedor */
+    left: 50%;           /* Lo coloca en el centro horizontal */
+    transform: translateX(-50%);  /* Ajusta el centro exacto */
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;      /* Centra el contenido verticalmente */
+    margin: 0;
+    padding: 0;
+    z-index: 2;  /* Asegura que el texto esté por encima de las imágenes */
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+}
+
+ul li {
+    list-style: none;          /* Elimina los puntos de la lista */
+    font-weight: 500;
+    font-size: 12vh;            /* Tamaño de fuente grande */
+    letter-spacing: 2.5vh;      /* Espaciado entre letras */
+    color: #555;
+    text-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: anim 1s infinite linear;
+}
+
+@keyframes anim{
+    0%{
+        color: #555;
+        text-shadow: none;
+    }
+    18%{
+        color: #555;
+        text-shadow: none;
+    }
+    20%{
+        color: #a200ff;
+        text-shadow: 0 0 1vh #a200ff,
+        0 0 3vh #ffffff
+    }
+    30%{
+        color: #555;
+        text-shadow: none;
+    }
+    35%{
+        color: #a200ff;
+        text-shadow: 0 0 1vh #a200ff,
+        0 0 3vh #ffffff
+    }
+    70%{
+        color: #555;
+        text-shadow: none;
+    }
+    85%{
+        color: #a200ff;
+        text-shadow: 0 0 1vh #a200ff,
+        0 0 3vh #ffffff
+    }
+    90%{
+        color: #555;
+        text-shadow: none;
+    }
+    100%{
+        color: #555;
+        text-shadow: none;
+    }
+}
+
+ul li:nth-child(1){
+    animation-delay: .2s;
+}
+ul li:nth-child(2){
+    animation-delay: .4s;
+}
+ul li:nth-child(3){
+    animation-delay: .6s;
+}
+ul li:nth-child(4){
+    animation-delay: .8s;
+}
+ul li:nth-child(5){
+    animation-delay: 1s;
+}
+ul li:nth-child(6){
+    animation-delay: 1.2s;
+}
+ul li:nth-child(7){
+    animation-delay: 1.4s;
+}
+ul li:nth-child(8){
+    animation-delay: 1.6s;
 }
 
 @media (max-width: 768px) {
