@@ -216,10 +216,6 @@ footer::before {
     bottom: 68px;
 }
 
-footer{
-    margin-top: 200%;
-}
-
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;

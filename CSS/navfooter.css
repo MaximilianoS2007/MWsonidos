@@ -4,6 +4,12 @@ body, html {
     font-family: Arial, sans-serif;
     height: 100%;
 }
+.Contenedor{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows:
+        auto 1fr auto;
+}
 .glass{
     background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
     backdrop-filter: blur(10px);

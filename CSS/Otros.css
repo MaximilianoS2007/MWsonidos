@@ -9,10 +9,6 @@ body, html {
     height: 100%;
     overflow: auto;
 }
-
-footer{
-    margin-top: auto;
-}
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,7 +38,16 @@ nav {
     height: 100%;
     color: white;
 }
-
+.glasss{
+    margin-top: 3%;
+    margin-top: 3%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
 #background-video {
     position: fixed;
     right: 0;
@@ -215,5 +220,14 @@ main ul li:nth-child(8){
 
     .alien-dj {
         margin: 0 auto 20px auto;
+    }
+    main ul li {
+        font-size: 7vh;            /* Tamaño de fuente grande */
+        letter-spacing: 0.5vh;      /* Espaciado entre letras */
+    }
+    .galeria{/*para que la galeria se quede repartidsa bien para las imagenes*/
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
