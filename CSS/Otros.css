@@ -11,14 +11,13 @@ body, html {
 }
 
 footer{
-    margin-top: 230%;
+    margin-top: auto;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 20px;
     margin: 20px;
@@ -62,7 +61,6 @@ nav {
 }
 
 .hero {
-    background: rgba(0, 0, 0, 0.4);  /* Fondo semi-transparente */
     backdrop-filter: blur(5px);      /* Efecto de difuminado */
     border-radius: 20px;
     padding: 80px;
@@ -72,7 +70,7 @@ nav {
     flex-direction: column;
     align-items: center;
     position: relative;  /* Necesario para posicionar el 'ul' de forma absoluta */
-    padding-top: 150px;  /* Espacio adicional arriba para que no se sobreponga */
+    padding-top: 20%;  /* Espacio adicional arriba para que no se sobreponga */
 }
 
 
@@ -115,7 +113,7 @@ img{
 
 
 
-ul {
+main ul {
     position: absolute;  /* Posiciona el 'ul' fuera del flujo normal */
     top: 0;              /* Lo coloca en la parte superior del contenedor */
     left: 50%;           /* Lo coloca en el centro horizontal */
@@ -129,7 +127,7 @@ ul {
     font-family: "Edu AU VIC WA NT Arrows", cursive;
 }
 
-ul li {
+main ul li {
     list-style: none;          /* Elimina los puntos de la lista */
     font-weight: 500;
     font-size: 12vh;            /* Tamaño de fuente grande */
@@ -184,28 +182,28 @@ ul li {
     }
 }
 
-ul li:nth-child(1){
+main ul li:nth-child(1){
     animation-delay: .2s;
 }
-ul li:nth-child(2){
+main ul li:nth-child(2){
     animation-delay: .4s;
 }
-ul li:nth-child(3){
+main ul li:nth-child(3){
     animation-delay: .6s;
 }
-ul li:nth-child(4){
+main ul li:nth-child(4){
     animation-delay: .8s;
 }
-ul li:nth-child(5){
+main ul li:nth-child(5){
     animation-delay: 1s;
 }
-ul li:nth-child(6){
+main ul li:nth-child(6){
     animation-delay: 1.2s;
 }
-ul li:nth-child(7){
+main ul li:nth-child(7){
     animation-delay: 1.4s;
 }
-ul li:nth-child(8){
+main ul li:nth-child(8){
     animation-delay: 1.6s;
 }
 
