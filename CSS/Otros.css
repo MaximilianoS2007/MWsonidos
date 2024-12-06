@@ -96,7 +96,7 @@ img{
 .galeria{/*para que la galeria se quede repartidsa bien para las imagenes*/
     width: 90%;
     max-width: 1200px;
-    padding: 40px auto;
+    padding: 60px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));/*va a rellenar las columnas dependiendo cunto sea necesario*/
     grid-auto-rows: 300px;
@@ -108,7 +108,7 @@ img{
     width: 100%;
     transition: 0.3s;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
@@ -212,10 +212,34 @@ main ul li:nth-child(8){
     animation-delay: 1.6s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+    .galeria {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap; /* No permitir que las imágenes se acomoden en varias filas */
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejorar la experiencia de desplazamiento táctil */
+        width: 100%;
+        scrollbar-width: none; /* Firefox */
+        scroll-snap-type: x mandatory; /* Habilitar scroll snapping */
+    }
+
+    .galeria img {
+        width: 100%; /* Las imágenes ocuparán todo el ancho de su contenedor */
+        height: 80%;
+        object-fit: cover; /* Mantener la proporción de las imágenes */
+        margin-right: 5px; /* Espacio entre las imágenes */
+        scroll-snap-align: start; /* Asegurarse de que cada imagen se alinee al inicio del contenedor */
+    }
+    
+    .hero div img {
+        filter: none; /* Elimina el filtro en pantallas pequeñas */
+    }
+    
     .hero {
         flex-direction: column;
         text-align: center;
+        padding-top: 40%;
     }
 
     .alien-dj {
