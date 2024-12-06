@@ -1,14 +1,12 @@
 @import url(../Componentes/Fuentes/CocomatPro-Bold.ttf);
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Danfo&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
-/*Maxi */
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
     height: 100%;
     overflow: auto;
-    
 }
 
 nav {
@@ -19,78 +17,46 @@ nav {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    margin: 20px;
+    margin: 1em;
+    
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin: 0 1em;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-
-#background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-}
-
-.logo {
-    width: 300px;
-    height: 50px;
-    border-radius: 20px;
-}
-
+/* Hero Section */
 .hero {
     backdrop-filter: blur(5px);
-    border-radius: 20px;
-    padding: 80px;
-    margin: 20px;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 1em;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;     /* Centra el contenido horizontalmente */
+    align-items: center;
+}
+
+h1, h2, h3{
+    text-decoration: none;
 }
 
 .hero-content p {
-    margin-bottom: 20px;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-.hero div img {
-    width: 70%;
-    height: auto;             /* Mantener proporciones correctas */
-    transition: 0.3s;
-    object-fit: cover;
+.hero img {
+    max-width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
 
 .hero img:hover {
-    transform: scale(1.1);     /* Efecto de zoom */
-}
-
-.hero h2, .hero h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;        /* Asegurar que el texto esté centrado */
-    width: 100%;               /* Ocupa el ancho completo */
-}
-
-.hero h3{
-    font-size: 40px;
+    transform: scale(1.1);
 }
 
 .hero .c15 {
@@ -142,69 +108,39 @@ nav {
     margin-right: 20px;
 }
 
-article{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Article Hover Effects */
 article {
     position: relative;
-    width: 450px;
-    transition: all .3s ease;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;       /* Centra el contenido horizontalmente */
-    margin-top: 0;              /* Elimina el margen superior */
+    align-items: center;
+    margin: 1em 0;
 }
 
 article img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
     object-fit: cover;
     width: 100%;
-    margin-top: 0;  /* Elimina cualquier margen superior, para que quede pegada al top del contenedor */
 }
 
 article img:last-child {
     position: absolute;
-    width: 200px;
-    bottom: 0;
+    width: 50%;
+    bottom: -20px;
     left: 0;
     right: 0;
     margin: auto;
-    transform: translateY(25%);
-    transition: .3s ease;
     opacity: 0;
+    transform: translateY(25%);
+    transition: all 0.3s ease;
 }
 
 article:hover {
-    transform: 
-    perspective(250px)
-    rotateX(10deg)
-    translateY(-5%)
-    translateZ(0);
-}
-
-article::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: 
-    linear-gradient(
-        to bottom,
-        transparent 10%,
-        rgba(255, 255, 255, 0.5) 50%,
-        rgb(255, 255, 255) 95%
-    );
-    opacity: 0;
-    transition: all .3s ease;
-}
-
-article:hover::before {
-    opacity: 1;
+    transform: perspective(250px) rotateX(10deg) translateY(-5%);
 }
 
 article:hover img:last-child {
@@ -220,15 +156,12 @@ footer{
     margin-top: auto;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1080px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    article{
+        left:  5%;
     }
 
-    .alien-dj {
-        margin: 0 auto 20px auto;
-    }
     footer{
         margin-top: auto;
     }
@@ -236,16 +169,17 @@ footer{
         bottom: auto;
     }
     
-    .hero h1{
-        font-size: 40px;
+    .hero {
+        text-align: center;
+        padding: 1em;
     }
 
-    .hero h2{
-        font-size: 15px;
+    .hero img {
+        max-width: 100%;
     }
 
-    article{
-        width: 500px;
+    article {
+        max-width: 90%;
     }
 
     .hero .c15, .hero .c18, .hero .c {
@@ -258,6 +192,7 @@ footer{
         margin-top: 10px;
         scrollbar-width: none; /* Firefox */
         scroll-snap-type: x mandatory; /* Habilitar scroll snapping */
+        scroll-snap-align: center;
     }
 
     .hero .c15 img, .hero .c18 img, .hero .c img {
@@ -270,5 +205,63 @@ footer{
     
     .hero div img {
         filter: none; /* Elimina el filtro en pantallas pequeñas */
+    }
+
+    .hero .c {
+        display: flex;
+        justify-content: flex-start; /* Alinea imágenes al inicio */
+        flex-wrap: nowrap; /* Mantiene las imágenes en una sola fila */
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejora la experiencia táctil */
+        width: 100%;
+        margin-top: 10px;
+        scrollbar-width: none; /* Oculta barra de desplazamiento en Firefox */
+        scroll-snap-type: x mandatory; /* Activa snapping horizontal */
+    }
+
+    .hero .c img {
+        width: auto; /* Ajusta al contenido */
+        height: auto; /* Mantiene proporciones */
+        max-width: 100%; /* Evita que crezcan más allá del contenedor */
+        object-fit: cover;
+        margin-right: 15px; /* Espacio entre imágenes */
+        scroll-snap-align: start; /* Snapping al inicio de cada imagen */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        margin: 0.5em 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5em;
+    }
+
+    .hero {
+        padding: 1em;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .hero .c img {
+        width: 80%;
+        margin: 0.5em;
     }
 }
