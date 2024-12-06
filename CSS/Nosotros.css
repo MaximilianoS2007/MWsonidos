@@ -1,24 +1,23 @@
-@import url(../Componentes/Fuentes/CocomatPro-Bold.ttf);
-@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Danfo&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
-
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
     height: 100%;
     overflow: auto;
+    font-family: "Poppins", serif;
 }
 
+/* Nav Styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 1em;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 1em;
-    
 }
 
 .nav-links a {
@@ -41,6 +40,17 @@ nav {
 
 h1, h2, h3{
     text-decoration: none;
+    align-items: center;
+}
+
+h2{
+    font-size: 15px;
+    font-family: "Poppins", serif;
+}
+
+h1{
+    font-size: 25px;
+    font-family: "Poppins", serif;
 }
 
 .hero-content p {
@@ -49,7 +59,7 @@ h1, h2, h3{
 }
 
 .hero img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
     border-radius: 10px;
@@ -101,18 +111,32 @@ h1, h2, h3{
     margin: 35px;
 }
 
+.hero .c img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .hero a{
     text-decoration: none;
     color: white;
     margin-left: 10px;
     margin-right: 20px;
+    font-family: "Poppins", serif;
+    font-size: 20px;
 }
+
 
 /* Article Hover Effects */
 article {
     position: relative;
     width: 100%;
     max-width: 250px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 450px;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -148,25 +172,15 @@ article:hover img:last-child {
     transform: translateY(10%);
 }
 
-footer::before {
-    bottom: 68px;
-}
-
-footer{
+/* Footer */
+footer {
     margin-top: auto;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1080px) {
     article{
-        left:  5%;
-    }
-
-    footer{
-        margin-top: auto;
-    }
-    footer::before {
-        bottom: auto;
+        left: 5%;
     }
     
     .hero {
@@ -179,7 +193,8 @@ footer{
     }
 
     article {
-        max-width: 90%;
+        max-width: 60%;
+        left: 20%;
     }
 
     .hero .c15, .hero .c18, .hero .c {
@@ -196,72 +211,102 @@ footer{
     }
 
     .hero .c15 img, .hero .c18 img, .hero .c img {
-        width: 100%; /* Las imágenes ocuparán todo el ancho de su contenedor */
+        width: 90%; /* Las imágenes ocuparán todo el ancho de su contenedor */
         height: auto;
         object-fit: cover; /* Mantener la proporción de las imágenes */
         margin-right: 15px; /* Espacio entre las imágenes */
         scroll-snap-align: start; /* Asegurarse de que cada imagen se alinee al inicio del contenedor */
     }
+
+    .hero .c15, .hero .c18, .hero .c {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5em;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        scroll-snap-type: x mandatory;
+    }
+
+    .hero .c img {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 80%;
+        margin-right: 0.5em;
+        scroll-snap-align: center;
+    }
     
     .hero div img {
         filter: none; /* Elimina el filtro en pantallas pequeñas */
     }
+}
 
-    .hero .c {
-        display: flex;
-        justify-content: flex-start; /* Alinea imágenes al inicio */
-        flex-wrap: nowrap; /* Mantiene las imágenes en una sola fila */
-        overflow-x: auto; /* Permite desplazamiento horizontal */
-        -webkit-overflow-scrolling: touch; /* Mejora la experiencia táctil */
-        width: 100%;
-        margin-top: 10px;
-        scrollbar-width: none; /* Oculta barra de desplazamiento en Firefox */
-        scroll-snap-type: x mandatory; /* Activa snapping horizontal */
+/* Scrollable Galleries for Small Screens */
+@media (max-width: 768px) {
+    .hero .c15, .hero .c18, .hero .c {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5em;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        scroll-snap-type: x mandatory;
     }
 
     .hero .c img {
-        width: auto; /* Ajusta al contenido */
-        height: auto; /* Mantiene proporciones */
-        max-width: 100%; /* Evita que crezcan más allá del contenedor */
-        object-fit: cover;
-        margin-right: 15px; /* Espacio entre imágenes */
-        scroll-snap-align: start; /* Snapping al inicio de cada imagen */
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero h2 {
-        font-size: 1rem;
-    }
-
-    .nav-links a {
-        margin: 0.5em 0;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 80%;
+        margin-right: 0.5em;
+        scroll-snap-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    nav {
-        padding: 0.5em;
+    body, html {
+        font-size: 14px; /* Adjust font size for very small screens */
     }
 
-    .hero {
-        padding: 1em;
+    /* Hero Section Text */
+    .hero-content p {
+        font-size: 1rem; /* Decrease font size for smaller devices */
     }
 
-    .hero img {
-        max-width: 100%;
+    /* Article image scaling */
+    article img:first-child {
+        max-height: 200px; /* Limit height on very small screens */
+        object-fit: cover;
     }
 
+    /* Ensure images in hero section scale properly */
+    .hero .c15 img,
+    .hero .c18 img,
     .hero .c img {
-        width: 80%;
-        margin: 0.5em;
+        width: 100%; /* Full width */
+        max-width: 95%; /* Constrain width to avoid overflow */
+        height: auto; /* Maintain aspect ratio */
+        margin: 5px;
+    }
+
+    /* Scrollable gallery adjustments */
+    .hero .c15, .hero .c18, .hero .c {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 5px;
+    }
+
+    .hero .c15 img,
+    .hero .c18 img,
+    .hero .c img {
+        max-width: 85%; /* Constrain image width */
+        height: auto;
+    }
+
+    /* Nav Links */
+    .nav-links a {
+        font-size: 0.9rem; /* Smaller font for nav items */
+    }
+
+    /* Footer Text */
+    footer {
+        padding: 0.5em;
+        font-size: 0.8rem; /* Smaller font size for footer */
     }
 }
